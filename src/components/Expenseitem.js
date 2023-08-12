@@ -1,13 +1,13 @@
 import './Expenseitem.css';
 
-function Expenseitem() {
+function Expenseitem(props) {
   return (
-    <div classname="expense-item">
-      <div> July 6 </div>
-      <div classname="expense-item__description">
-        <h2> car insurance </h2>
+    <div className="expense-item">
+      <div>{props.date.toISOString()}</div>
+      <div className="expense-item__description">
+        <h2>{props.title}</h2>
       </div>
-      <div classname="expense-item__price"> $ 200 </div>
+      <div className="expense-item__price">{props.amount}</div>
     </div>
   );
 }
