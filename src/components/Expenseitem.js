@@ -1,9 +1,12 @@
-import './Expenseitem.css';
+import ExpenseDate from './ExpenseDate';
+import './ExpenseItem.css';
 
-function Expenseitem(props) {
+function ExpenseItem(props) {
+  
+
   return (
     <div className="expense-item">
-      <div>{props.date.toISOString()}</div>
+      <ExpenseDate date={props.date}/>
       <div className="expense-item__description">
         <h2>{props.title}</h2>
       </div>
@@ -11,4 +14,4 @@ function Expenseitem(props) {
     </div>
   );
 }
-export default Expenseitem;
+export default ExpenseItem;
